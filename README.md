@@ -1,8 +1,10 @@
 # Design and Evaluation of a Latency-Deterministic FPGA-Based High-Frequency Trading (HFT) System
 
-Platform Frequency
+![Platform](https://img.shields.io/badge/Platform-Xilinx%20Zynq--7020-orange)
+![Clock](https://img.shields.io/badge/Clock-100%20MHz-brightgreen)
 
-📖 Overview
+# 📖 Overview
+
 In modern high-frequency trading (HFT), temporal determinism and predictable tail latency are strict requirements that are challenging to guarantee in software-based environments due to operating system scheduling, context switching, and hardware interrupts.
 
 This repository contains the RTL source code and evaluation framework for a fully deterministic, hardware-accelerated HFT pipeline implemented on a Field Programmable Gate Array (FPGA). By replacing variable-latency software arrays with a Hybrid Top-K Register Cache and a Circular Sparse Block RAM (BRAM) Architecture, this design eliminates the O(N) latency penalty of traditional memory shifting.
