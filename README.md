@@ -13,18 +13,15 @@ The empirical evaluations indicate that this microarchitecture evaluates market 
 
 ✨ Key Architectural Features
 
-Cycle-Deterministic RTL Pipeline:
-Processes fixed-length (12-byte) market data and generates trading decisions in a strictly bounded timeframe.
+1. Cycle-Deterministic RTL Pipeline:Processes fixed-length (12-byte) market data and generates trading decisions in a strictly bounded timeframe.
 
-Hybrid Order Book Engine:
-- Top-K Cache: Parallel hardware registers provide O(1) access to the most competitive market prices.
-- Circular Sparse BRAM: A 512-depth deep storage layer governed by a sliding window pointer, eliminating physical memory shifting during market price drifts.
+2. Hybrid Order Book Engine:
+   - **Top-K Cache:** Parallel hardware registers provide `O(1)` access to the most competitive market prices.
+   - **Circular Sparse BRAM:** A 512-depth deep storage layer governed by a sliding window pointer, eliminating physical memory shifting during market price drifts.
 
-Advanced Market Maker (AMM):
-A 2-cycle DSP-based trading logic unit that calculates mid-price, market spread, and applies dynamic inventory skewing and risk-gating.
+3. Advanced Market Maker (AMM):A 2-cycle DSP-based trading logic unit that calculates mid-price, market spread, and applies dynamic inventory skewing and risk-gating.
 
-Backpressure-Aware Buffering:
-A central 80-bit synchronous FIFO safely absorbs burst traffic without packet loss or timing violations.
+4. Backpressure-Aware Buffering:A central 80-bit synchronous FIFO safely absorbs burst traffic without packet loss or timing violations.
 
 🏗️ System Architecture
 
